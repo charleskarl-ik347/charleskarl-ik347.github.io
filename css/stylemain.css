@@ -215,7 +215,12 @@
     line-height: 1.6;
     color: #494e52;
 }
-
+.main li {
+    font-family: "PT Serif", Georgia, Times, serif;
+    line-height: 1.6;
+    color: #494e52;
+    margin-bottom: 0.5em;
+}
 /*Footers */
 .site-footer {
   background-color: #041530;
