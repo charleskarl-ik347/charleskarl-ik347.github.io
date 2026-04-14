@@ -5,6 +5,7 @@
   position: relative;
   overflow: hidden;
   display: flex;
+  transition: height 0.5s ease, opacity 0.5s ease;
 }
 .hero-column {
     position: relative; 
@@ -21,6 +22,18 @@
 .hero-column:hover .banner-image {
     transform: scale(1.05);
 }
+.hero {
+  overflow: hidden;
+}
+/* Hero collapse state */
+.hero.collapsed .hero-container {
+    height: 0;
+    opacity: 0;
+}
+.hero.collapsed .hero-text {
+    opacity: 0;
+    transform: translate(-45%, -55%);
+}
 #emphasisname{
     font-family: arial, verdana, sans-serif;
     font-size: 50px;
@@ -33,6 +46,7 @@
   background-color: rgba(158, 210, 255, 0.619);
   color: rgb(255, 255, 255);
   text-align: center;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .hero-container h3{
     position: absolute;
@@ -221,6 +235,18 @@
     color: #494e52;
     margin-bottom: 0.5em;
 }
+.maincontent a {
+  text-decoration:underline;
+  color: #120e5b;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+  font-size: 1.1rem;
+}
+
+.maincontent a:hover {
+  color: #d971b4;
+}
+
 /*Footers */
 .site-footer {
   background-color: #041530;
