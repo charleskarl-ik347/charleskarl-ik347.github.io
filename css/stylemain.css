@@ -325,3 +325,79 @@
   margin-right: 8px;
   font-size: 1.2rem;
 }
+
+/*Blogging page */
+#medium-articles {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Year and Divider */
+.post-year {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.post-divider {
+    border: 0;
+    border-top: 1px solid #666;
+    margin-bottom: 15px;
+}
+
+/* Title */
+.post-title a {
+    color: #00a8e8;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.post-title a:hover {
+    color: #00a8e8;
+    text-decoration: underline;
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin: 10px 0;
+}
+
+.post-meta i {
+    margin-right: 5px;
+}
+
+/* Body and Image */
+.post-body {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+    align-items: flex-start;
+}
+
+.post-image {
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0; /* Prevents image from squishing */
+}
+
+.post-excerpt {
+    line-height: 1.6;
+    color: #ddd;
+    margin: 0;
+}
+
+/*Another responsive adjustment for the blog cards */
+@media (max-width: 600px) {
+    .post-body {
+        flex-direction: column;
+    }
+    .post-image {
+        width: 100%;
+        height: auto;
+    }
+}
