@@ -10,7 +10,11 @@ fetch(apiUrl)
       const options = { year: 'numeric', month: 'long', day: 'numeric' };
       const date = new Date(item.pubDate).toLocaleDateString('en-US', options);
 
-      const snippet = item.description.replace(/<[^>]*>/g, '').substring(0, 150) + '...';
+      const fullText = item.description.replace(/<[^>]*>/g, '');
+      const snippet = fullText.substring(0, 150) + '...';
+      const words = fullText.trim().split(/\s+/).filter(Boolean).length;
+      const WPM = 275; // approximate Medium reading speed
+      const readMinutes = Math.max(1, Math.ceil(words / WPM));
 
       return `
         <div class="blog-post-row">
@@ -20,7 +24,7 @@ fetch(apiUrl)
             <h3 class="post-title"><a href="${item.link}">${item.title}</a></h3>
             
             <div class="post-meta">
-              <span><i class="far fa-clock"></i> 5 minute read</span>
+              <span><i class="far fa-clock"></i> ${readMinutes} min read</span>
               <p><strong><i class="fas fa-calendar-alt"></i> Published:</strong> ${date}</p>
             </div>
 
