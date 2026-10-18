@@ -411,8 +411,6 @@
 }
 
 .archive__media img {
-  width: 220px;
-  height: 132px;
   object-fit: cover;
   border-radius: 4px;
   display: block;
@@ -424,6 +422,8 @@
 
 .archive__item-title {
   margin: 0 0 8px 0;
+  font-weight: 600;
+  line-height: 1.4;
   font-size: 1.25rem;
 }
 
@@ -431,6 +431,8 @@
   color: #111827; /* dark gray */
   text-decoration: none;
   font-weight: 600;
+  line-height: 1.4;
+  font-size: 1.25rem;
 }
 
 .archive__item-title a:hover {
