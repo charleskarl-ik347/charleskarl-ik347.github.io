@@ -454,4 +454,117 @@
         width: 100%;
         height: auto;
     }
+    .personal-layout {
+        gap: 16px;
+        margin-bottom: 26px;
+    }
+
+    .personal-text p {
+        line-height: 1.7;
+    }
+
+    #whydothis,
+    #iliketrains {
+        margin-top: 35px;
+    }
 }
+
+@media (max-width: 900px) {
+    .personal-layout,
+    .personal-layout--reverse {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .personal-layout--reverse .personal-image,
+    .personal-layout--reverse .personal-text {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .personal-details {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .personal-image img {
+        max-width: 500px;
+    }
+}
+/* very redundant but whatever. */
+/* Personal Homepage Layout for the about me */
+
+.personal-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+    align-items: start;
+    gap: 28px;
+    margin-bottom: 32px;
+}
+
+.personal-layout--reverse {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.9fr);
+}
+
+.personal-layout--reverse .personal-text {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.personal-layout--reverse .personal-image {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.personal-image {
+    min-width: 0;
+}
+
+.personal-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.personal-text {
+    min-width: 0;
+}
+
+.personal-text p {
+    margin: 0 0 16px;
+    line-height: 1.75;
+}
+
+.personal-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    margin: 24px 0 55px;
+}
+
+.detail-column {
+    min-width: 0;
+}
+
+.detail-column h3 {
+    margin: 0 0 12px;
+}
+
+.detail-column ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.detail-column li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+#whydothis,
+#iliketrains {
+    margin-top: 45px;
+    margin-bottom: 24px;
+}
+
+
